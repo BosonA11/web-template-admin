@@ -6,10 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const SubApp: React.FC = () => {
   const location = useLocation();
   const navigation = useNavigate();
-  const path = location.pathname
-    .replace("/subApp", "")
-    .replace("/vite", "")
-    .replace("/", ""); ////
+  const path = location.pathname.replace("/subApp", "").replace("/", ""); ////   .replace("/vite", "")
   const viteUrl = hostMap("//localhost:8000/") + path;
   interface Props {
     jump: (name: string) => void;
