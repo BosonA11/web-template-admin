@@ -19,6 +19,7 @@ const AccountSettings = lazy(
   () => import("../pages/AccountPage/AccountSettings")
 );
 const DetailPage = lazy(() => import("../pages/DetailPage"));
+const SubApp = lazy(() => import("../pages/SubApp"));
 
 const routes = [
   {
@@ -69,6 +70,12 @@ const routes = [
                 element: <AccountSettings />,
               },
             ],
+          },
+          {
+            path: "subApp",
+            title: "SubAppage",
+            icon: <DashboardOutlined />,
+            element: <SubApp />,
           },
           {
             path: "*",
